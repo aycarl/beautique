@@ -15,16 +15,16 @@ class SignUp extends React.Component {
             displayName: '',
             email: '',
             password: '',
-            confirmPasswrod:''
+            confirmPassword:''
         }
     }
 
     handleSubmit = async event => {
         event.preventDefault();
 
-        const { displayName, email, password, confirmPasswrod } = this.state;
+        const { displayName, email, password, confirmPassword } = this.state;
 
-        if(password !== confirmPasswrod){
+        if(password !== confirmPassword){
             alert("Passwords don't match");
             return;
         }
@@ -41,7 +41,7 @@ class SignUp extends React.Component {
                 displayName: '',
                 email: '',
                 password: '',
-                confirmPasswrod:''
+                confirmPassword:''
             });
 
 
@@ -57,7 +57,7 @@ class SignUp extends React.Component {
     }
 
     render() {
-        const { displayName, email, password, confirmPasswrod } = this.state;
+        const { displayName, email, password, confirmPassword } = this.state;
 
         return(
             <div className='sign-up'>
