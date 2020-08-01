@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from "redux-saga/effects";
+import { takeLatest, call, put } from "redux-saga/effects";
 
 import { ShopActionTypes } from "./shop.types";
 
@@ -28,9 +28,10 @@ export function* fetchCollectionsAsync() {
   }
 }
 
+// a saga that listens to the last fetch_collections_Start action
+// and calls the fetchCollectionsAsync generator to make the API call
 export function* fetchCollectionsStart() {
-  yield console.log("I am fired 09128837562");
-  yield takeEvery(
+  yield takeLatest(
     ShopActionTypes.FETCH_COLLECTIONS_START,
     fetchCollectionsAsync
   );

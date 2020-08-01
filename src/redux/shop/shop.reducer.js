@@ -11,7 +11,7 @@ const shopReducer = (state = INITIAL_STATE, action) => {
     case ShopActionTypes.FETCH_COLLECTIONS_START:
       return {
         ...state,
-        isFeatching: true
+        isFetching: true
       };
 
     case ShopActionTypes.FETCH_COLLECTIONS_SUCCESS:
